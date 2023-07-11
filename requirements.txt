@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pymongo>=4.3.3
+python-dotenv
+pydantic
