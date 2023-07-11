@@ -4,11 +4,11 @@
 
 then add api as a secret
 
-`kubectl create secret generic DB_USER --from-literal=key=<api> -n banks`
+`kubectl create secret generic db-data --from-literal=key=<api> -n banks`
 
 check it 
 
-`kubectl get secret DB_USER -n banks --template={{.data.key}} | base64 -D `
+`kubectl get secret db-data -n banks --template={{.data.key}} | base64 -D `
 
 # For update with a tag
 

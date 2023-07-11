@@ -8,12 +8,11 @@ class Database:
         self.__DB_USER = os.getenv('DB_USER')
         self.__DB_PASSWORD = os.getenv('DB_PASSWORD')
         self.__DB_URL = os.getenv('DB_URL')
-
-    def __init__(self):
-        self.__get_env()
         self.db_name = os.getenv('db_name')
         self.collection_name = os.getenv('collection_name')
 
+    def __init__(self):
+        self.__get_env()
         # Send a ping to confirm a successful connection
         try:
             self.client = pymongo.MongoClient(
