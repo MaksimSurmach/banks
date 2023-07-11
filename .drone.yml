@@ -17,7 +17,7 @@ steps:
     commands:
       - mkdir ~/.kube
       - echo $k8s_config | base64 -d > ~/.kube/config
-      - helm upgrade --set image.tag=${DRONE_COMMIT_SHA} --namespace=ranus ranus helm/ranus
+      - helm upgrade --set image.tag=${DRONE_COMMIT_SHA} --namespace=banks banks helm/  --install --wait
 
     environment:
       k8s_config:
